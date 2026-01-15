@@ -421,8 +421,9 @@ def on_press(key):
         elif key == pynput_keyboard.Key.ctrl:
             print(f"\n{COLORS['SYSTEM_STATUS']}👋 欢迎再次使用小智语音助手！{COLORS['RESET']}")
         elif hasattr(key, 'char') and key.char == 'r' and not exit_flag:
+            print(f"\n{COLORS['SYSTEM_STATUS']}按R键重新启动！{COLORS['RESET']}")
             restart_program()
-        elif hasattr(key, 'char') and key.char == 't' and not exit_flag:  # 
+        elif hasattr(key, 'char') and key.char == 't' and not exit_flag:
             print(f"\n{COLORS['SYSTEM_STATUS']}按T键切换手/自动！{COLORS['RESET']}")
             toggle_auto_mode()
     except Exception as e:
@@ -451,7 +452,7 @@ def on_message(client, userdata, message):
             print(f"{COLORS['SYSTEM_STATUS']}{ICONS['PLAYING']} 开始播放{COLORS['RESET']}")
         elif msg['state'] == 'stop':
             print(f"{COLORS['SYSTEM_STATUS']}{ICONS['PAUSED']} 播放结束{COLORS['RESET']}")
-            toggle_auto_mode()
+            #toggle_auto_mode()
     
     elif msg['type'] == 'llm':
         if 'emotion' in msg:
