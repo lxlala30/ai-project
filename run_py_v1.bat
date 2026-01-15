@@ -17,13 +17,13 @@ python .\py-xiaozhi\py-ai1.0.py
 REM 等待指令执行完成
 echo Python 脚本 py-ai1.0.py 执行完成。
 
-REM 提示用户是否重新执行脚本
-echo.
-echo 按回车键重新执行脚本，或按任意其他键退出...
-set /p "="
-if errorlevel 255 goto :eof
-goto :loop
+@REM REM 提示用户是否重新执行脚本
+@REM echo.
+@REM echo 按回车键重新执行脚本，或按任意其他键退出...
+@REM set /p "="
+@REM if errorlevel 255 goto :eof
+@REM goto :loop
 
-:eof
-echo 脚本已退出。
-pause
+@REM :eof
+@REM echo 脚本已退出。
+@REM pause
